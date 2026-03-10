@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Irgin Zaelani</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #FFDE59;
+            --card-bg: #FFFFFF;
+            --primary: #FF5757;
+            --secondary: #5271FF;
+            --dark: #1A1A1A;
+            --whatsapp: #25D366;
+            --accent: #FF914D;
+            --test-color: #a855f7;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--dark);
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .cartoon-font {
+            font-family: 'Bungee', cursive;
+        }
+
+        /* Gaya Neo-Brutalism Kartun */
+        .neo-brutalism {
+            background-color: white;
+            border: 4px solid var(--dark);
+            box-shadow: 10px 10px 0px var(--dark);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .neo-brutalism:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 14px 14px 0px var(--dark);
+        }
+
+        .btn-pop {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--primary);
+            color: white;
+            border: 4px solid var(--dark);
+            box-shadow: 6px 6px 0px var(--dark);
+            font-family: 'Bungee', cursive;
+            transition: all 0.1s;
+        }
+
+        .btn-pop:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px var(--dark);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .sticker {
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        /* Menghilangkan scrollbar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi -->
+    <nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[98%] md:w-max">
+        <div class="bg-white border-[3px] border-dark px-2.5 md:px-6 py-2 rounded-full flex gap-2 sm:gap-3 md:gap-6 justify-center items-center shadow-lg overflow-x-auto no-scrollbar">
+            <a href="#home" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Beranda</a>
+            <a href="#about" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Tentang</a>
+            <a href="#education" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Sekolah</a>
+            <a href="#skills" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Keahlian</a>
+            <a href="#certificates" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Sertif</a>
+            <a href="#testimonial" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Testi</a>
+            <a href="#social" class="hover:text-secondary font-bold text-[10px] sm:text-[11px] md:text-sm uppercase whitespace-nowrap">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- 1. Home / Beranda -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="sticker top-20 left-10 text-6xl opacity-20 rotate-12">⭐</div>
+        <div class="sticker bottom-20 right-10 text-6xl opacity-20 -rotate-12">⚡</div>
+        
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+            <div class="flex-1 text-center md:text-left z-20">
+                <span class="bg-secondary text-white px-4 py-2 border-2 border-dark font-bold mb-4 inline-block uppercase">Desainer & Kreator Digital</span>
+                <h1 class="text-5xl md:text-8xl mb-6 leading-tight">IRGIN<br><span class="text-primary">ZAELANI</span></h1>
+                <p class="text-xl md:text-2xl font-bold mb-10 max-w-lg">
+                    Membangun pengalaman visual yang ceria, berwarna, dan penuh kejutan!
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <!-- Teks diubah dari KIRIM TESTIMONI menjadi PORTOFOLIO -->
+                    <a href="#certificates" class="btn-pop">PORTOFOLIO</a>
+                </div>
+            </div>
+            <div class="flex-1 relative">
+                <div class="w-64 h-64 md:w-96 md:h-96 neo-brutalism bg-white flex items-center justify-center overflow-hidden floating">
+                    <svg viewBox="0 0 200 200" class="w-full h-full p-4">
+                        <rect x="50" y="50" width="100" height="100" fill="#5271FF" stroke="#1A1A1A" stroke-width="6" rx="20" />
+                        <circle cx="80" cy="90" r="10" fill="white" stroke="#1A1A1A" stroke-width="4" />
+                        <circle cx="120" cy="90" r="10" fill="white" stroke="#1A1A1A" stroke-width="4" />
+                        <circle cx="80" cy="90" r="4" fill="#1A1A1A" />
+                        <circle cx="120" cy="90" r="4" fill="#1A1A1A" />
+                        <path d="M80 120 Q100 140 120 120" stroke="#1A1A1A" stroke-width="6" fill="none" stroke-linecap="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Tentang Diri -->
+    <section id="about" class="bg-white border-y-8 border-dark">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row gap-12 items-center">
+            <div class="flex-1">
+                <div class="neo-brutalism p-2 bg-primary rotate-3">
+                    <div class="bg-white border-4 border-dark rounded-lg overflow-hidden aspect-[3/4]">
+                        <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410018/1770601490_136e111d.jpg" alt="Foto Irgin Zaelani" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300">
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-4xl mb-6 uppercase">Siapa Saya?</h2>
+                <div class="text-xl space-y-4 font-medium">
+                    <p>Halo! Saya Irgin, seorang desainer kreatif yang percaya bahwa estetika tidak harus membosankan. Saya menggabungkan imajinasi dengan keahlian desain untuk menciptakan karya yang memiliki kepribadian unik.</p>
+                    <p>Fokus saya adalah pada desain grafis dan ilustrasi, memastikan setiap visual memberikan pesan yang kuat bagi audiens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Pendidikan -->
+    <section id="education">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl mb-12 text-center underline decoration-primary decoration-8 uppercase">Riwayat Pendidikan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="neo-brutalism p-8 bg-blue-50">
+                    <div class="text-secondary font-bold mb-2">2023 - 2026</div>
+                    <h3 class="text-xl mb-4 text-dark uppercase">Sekolah Menengah Kejuruan</h3>
+                    <p class="font-bold">SMK Al-Irsyad Al-Islamiyyah Haurgeulis</p>
+                    <ul class="mt-4 list-disc list-inside opacity-80 text-sm">
+                        <li>Fokus pada Pengembangan Teknologi</li>
+                        <li>Mengembangkan Kreativitas Digital</li>
+                    </ul>
+                </div>
+                <div class="neo-brutalism p-8 bg-red-50">
+                    <div class="text-primary font-bold mb-2">2020 - 2023</div>
+                    <h3 class="text-xl mb-4 text-dark uppercase">Sekolah Menengah Pertama</h3>
+                    <p class="font-bold">SMPN 2 Haurgeulis</p>
+                    <p class="mt-4 opacity-80 text-sm">Aktif dalam berbagai kegiatan sekolah dan mulai mendalami dunia teknologi informasi.</p>
+                </div>
+                <div class="neo-brutalism p-8 bg-yellow-50">
+                    <div class="text-yellow-600 font-bold mb-2">2014 - 2020</div>
+                    <h3 class="text-xl mb-4 text-dark uppercase">Sekolah Dasar</h3>
+                    <p class="font-bold">SDN Cipedang Bunder</p>
+                    <p class="mt-4 opacity-80 text-sm">Memulai perjalanan belajar dan membangun minat pada kreativitas sejak usia dini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Keahlian -->
+    <section id="skills" class="bg-dark text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl mb-16 text-white uppercase">Keahlian Utama</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 neo-brutalism bg-white text-dark flex items-center justify-center text-4xl mb-4 p-4">
+                        <svg viewBox="0 0 24 24" fill="#00833E" class="w-full h-full">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <p class="font-bold uppercase tracking-widest text-white">CorelDRAW</p>
+                    <span class="text-xs uppercase mt-1 bg-secondary px-2 py-1 rounded-md text-white border border-white">Menengah</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 neo-brutalism bg-white text-dark flex items-center justify-center text-4xl mb-4 p-4">
+                        <svg viewBox="0 0 24 24" fill="#00C4CC" class="w-full h-full">
+                            <circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/>
+                            <text x="50%" y="60%" text-anchor="middle" font-size="8" font-weight="bold" fill="#1A1A1A" font-family="Arial">CANVA</text>
+                        </svg>
+                    </div>
+                    <p class="font-bold uppercase tracking-widest text-white">Canva</p>
+                    <span class="text-xs uppercase mt-1 bg-primary px-2 py-1 rounded-md text-white border border-white">Pemula</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 neo-brutalism bg-white text-dark flex items-center justify-center text-4xl mb-4 font-bold p-2">
+                        <div class="bg-[#FF9A00] w-full h-full flex items-center justify-center rounded border-2 border-dark text-dark text-2xl">Ai</div>
+                    </div>
+                    <p class="font-bold uppercase tracking-widest text-white">Illustrator</p>
+                    <span class="text-xs uppercase mt-1 bg-primary px-2 py-1 rounded-md text-white border border-white">Pemula</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 neo-brutalism bg-white text-dark flex items-center justify-center text-4xl mb-4 font-bold p-2">
+                        <div class="bg-[#001E36] w-full h-full flex items-center justify-center rounded border-2 border-dark text-[#31A8FF] text-2xl">Ps</div>
+                    </div>
+                    <p class="font-bold uppercase tracking-widest text-white">Photoshop</p>
+                    <span class="text-xs uppercase mt-1 bg-primary px-2 py-1 rounded-md text-white border border-white">Pemula</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Sertifikat dan Penghargaan -->
+    <section id="certificates" class="bg-[#f0f0f0] border-y-8 border-dark">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl mb-12 text-center underline decoration-accent decoration-8 uppercase">Sertifikat & Penghargaan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="neo-brutalism overflow-hidden flex flex-col bg-white">
+                    <div class="h-48 bg-accent flex items-center justify-center text-6xl border-b-4 border-dark">🇮🇩</div>
+                    <div class="p-6">
+                        <h3 class="text-xl mb-2 uppercase">Pengibar Bendera</h3>
+                        <p class="font-bold text-sm text-gray-600 mb-4">Kecamatan Haurgeulis</p>
+                        <p class="text-sm">Berperan aktif sebagai petugas pengibar bendera pada upacara peringatan hari besar nasional.</p>
+                    </div>
+                </div>
+
+                <div class="neo-brutalism overflow-hidden flex flex-col bg-white">
+                    <div class="h-48 bg-secondary flex items-center justify-center text-6xl border-b-4 border-dark">🤝</div>
+                    <div class="p-6">
+                        <h3 class="text-xl mb-2 uppercase">Anggota OSIS</h3>
+                        <p class="font-bold text-sm text-gray-600 mb-4">Periode 2024 - 2025</p>
+                        <p class="text-sm">Berkontribusi dalam organisasi intra sekolah untuk mengembangkan kepemimpinan.</p>
+                    </div>
+                </div>
+
+                <div class="neo-brutalism overflow-hidden flex flex-col bg-white">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl border-b-4 border-dark">🏢</div>
+                    <div class="p-6">
+                        <h3 class="text-xl mb-2 uppercase">Praktik Kerja Lapangan</h3>
+                        <p class="font-bold text-sm text-gray-600 mb-4">PT. AUNI DIGITAL PRINTING</p>
+                        <p class="text-sm">Menyelesaikan program magang industri dengan hasil memuaskan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Testimonial -->
+    <section id="testimonial">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-5xl mb-12 uppercase">TESTIMONIAL ☕</h2>
+            <div class="neo-brutalism p-10 bg-white">
+                <form onsubmit="event.preventDefault(); alert('Testimoni Berhasil Dikirim!')">
+                    <div class="grid grid-cols-1 gap-6 text-left">
+                        <div>
+                            <label class="font-bold uppercase block mb-2">Nama Anda</label>
+                            <input type="text" class="w-full border-4 border-dark p-3 rounded-lg focus:bg-yellow-50 outline-none" placeholder="Nama pemberi testimoni">
+                        </div>
+                        <div>
+                            <label class="font-bold uppercase block mb-2">Email</label>
+                            <input type="email" class="w-full border-4 border-dark p-3 rounded-lg focus:bg-yellow-50 outline-none" placeholder="email@anda.com">
+                        </div>
+                        <div>
+                            <label class="font-bold uppercase block mb-2">Testimoni</label>
+                            <textarea rows="4" class="w-full border-4 border-dark p-3 rounded-lg focus:bg-yellow-50 outline-none" placeholder="Tuliskan pengalaman atau masukan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-pop w-full text-xl mt-4">KIRIM TESTIMONI!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Media Sosial & Kontak -->
+    <section id="social" class="bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl mb-12 text-center underline decoration-secondary decoration-8 uppercase">Media Sosial</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="https://wa.me/6282262813736" target="_blank" class="neo-brutalism p-6 flex flex-col items-center group bg-green-50 hover:bg-green-100 border-green-500 block">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">💬</div>
+                    <h3 class="text-xl font-bold uppercase mb-1">WhatsApp</h3>
+                    <p class="text-md font-bold text-green-600">0822 6281 3736</p>
+                </a>
+                <a href="https://www.instagram.com/irginzae" target="_blank" class="neo-brutalism p-6 flex flex-col items-center group bg-pink-50 hover:bg-pink-100 border-pink-400 block">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">📸</div>
+                    <h3 class="text-xl font-bold uppercase mb-1">Instagram</h3>
+                    <p class="text-md font-bold text-pink-600">@irginzae</p>
+                </a>
+                <a href="mailto:irginzaelani12@gmail.com" class="neo-brutalism p-6 flex flex-col items-center group bg-blue-50 hover:bg-blue-100 border-blue-400 block">
+                    <div class="text-6xl mb-4 group-hover:scale-110 transition-transform">✉️</div>
+                    <h3 class="text-xl font-bold uppercase mb-1">Email</h3>
+                    <p class="text-[10px] md:text-xs font-bold text-blue-600 break-all">irginzaelani12@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12 text-center">
+        <p class="text-xl cartoon-font mb-4">© 2026 IRGIN ZAELANI</p>
+        <p class="opacity-50 italic">Dibuat dengan semangat dan kreativitas tinggi.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
