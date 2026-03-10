@@ -91,9 +91,9 @@
             
             <div class="hidden md:flex gap-8 font-semibold text-gray-700">
                 <a href="#home" class="hover:text-beast-orange">Beranda</a>
-                <a href="#menu" class="hover:text-beast-orange">Menu</a>
+                <button onclick="toggleMenuModal()" class="hover:text-beast-orange">Lihat Menu</button>
+                <a href="#menu" class="hover:text-beast-orange">Pesan</a>
                 <a href="#testimonials" class="hover:text-beast-orange">Ulasan</a>
-                <a href="#contact" class="hover:text-beast-orange">Kontak</a>
             </div>
 
             <div class="flex items-center gap-4">
@@ -118,7 +118,9 @@
                     Racikan teh pilihan dari **Irgin Zaelani** dengan buah segar dan topping melimpah. Temukan rasa yang membuat hari Anda lebih "Beast"!
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#menu" class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg">Pesan Sekarang</a>
+                    <button onclick="toggleMenuModal()" class="btn-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center gap-2">
+                        <i class="fas fa-book-open"></i> Lihat Menu Visual
+                    </button>
                     <a href="https://irginzaelani.github.io/" target="_blank" class="bg-white border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:border-beast-blue hover:text-beast-blue transition flex items-center gap-2">
                         <i class="fas fa-user-circle"></i> Profil Pemilik
                     </a>
@@ -128,12 +130,13 @@
                 <div class="absolute -z-10 w-72 h-72 bg-beast-orange rounded-full blur-3xl opacity-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
                 <img src="https://simangu.smksalirsyad-hgl.sch.id/apimangu/uploads/siswa/232410018/1773114051_dbb78977.png" 
                      alt="[Gambar Spanduk BEASTTEA]" 
-                     class="banner-img rotate-2 hover:rotate-0 transition duration-500 cursor-pointer">
+                     class="banner-img rotate-2 hover:rotate-0 transition duration-500 cursor-pointer"
+                     onclick="toggleMenuModal()">
             </div>
         </div>
     </section>
 
-    <!-- Modal Katalog Menu Visual -->
+    <!-- MODAL KATALOG MENU VISUAL -->
     <div id="menu-modal" class="fixed inset-0 z-[70] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl animate-fade-in">
             <button onclick="toggleMenuModal()" class="absolute top-4 right-4 z-10 bg-white text-beast-blue w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-beast-orange hover:text-white transition">
@@ -146,16 +149,17 @@
             </div>
             <div class="p-6 text-center border-t">
                 <h3 class="text-2xl font-black text-beast-blue uppercase">Daftar Menu Spesial</h3>
-                <p class="text-gray-500 text-sm">Pilih favoritmu dan nikmati kesegarannya!</p>
+                <p class="text-gray-500 text-sm mb-4">Pilih favoritmu dan nikmati kesegarannya!</p>
+                <a href="#menu" onclick="toggleMenuModal()" class="inline-block bg-beast-orange text-white px-6 py-2 rounded-lg font-bold">Pesan Sekarang</a>
             </div>
         </div>
     </div>
 
-    <!-- Bagian Menu -->
+    <!-- Bagian List Produk (Pemesanan) -->
     <section id="menu" class="py-20">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-beast-blue mb-4">Pesan Favorit Anda</h2>
+                <h2 class="text-4xl font-extrabold text-beast-blue mb-4">Pilih & Pesan Sekarang</h2>
                 <div class="w-24 h-1 bg-beast-orange mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-list">
@@ -265,7 +269,7 @@
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fas fa-envelope text-beast-yellow"></i>
-                        <span>halo@beasttea.id</span>
+                        <a href="mailto:irginzaelani12@gmail.com" class="hover:text-beast-orange transition">irginzaelani12@gmail.com</a>
                     </li>
                 </ul>
             </div>
@@ -277,7 +281,7 @@
 
     <!-- Modal Keranjang -->
     <div id="cart-modal" class="fixed inset-0 z-[60] bg-black bg-opacity-50 flex justify-end">
-        <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col">
+        <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col animate-fade-in" style="animation-direction: normal;">
             <div class="p-6 flex justify-between items-center border-b">
                 <h3 class="text-2xl font-extrabold text-beast-blue">Keranjang</h3>
                 <div class="flex gap-4">
@@ -289,7 +293,7 @@
             </div>
             
             <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4">
-                <!-- Item keranjang muncul di sini -->
+                <!-- Item keranjang -->
             </div>
             
             <div class="p-6 border-t bg-gray-50">
